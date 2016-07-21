@@ -1,0 +1,187 @@
+<ion-header>
+    <ion-navbar>
+        <button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <ion-title>Buttons</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <h2>Basic</h2>
+    <button light>Light</button>
+    <button>Primary</button>
+    <button secondary>Secondary</button>
+    <button danger>Danger</button>
+    <button dark>Dark</button>
+
+    <hr>
+
+    <h2>Outline</h2>
+    <button light outline>Light Outline</button>
+    <button outline>Primary Outline</button>
+    <button secondary outline>Secondary Outline</button>
+    <button danger outline>Danger Outline</button>
+    <button dark outline>Dark Outline</button>
+
+    <hr>
+
+    <h2>Clear</h2>
+    <button light clear>Light Clear</button>
+    <button clear>Primary Clear</button>
+    <button secondary clear>Secondary Clear</button>
+    <button danger clear>Danger Clear</button>
+    <button dark clear>Dark Clear</button>
+
+    <hr>
+
+    <h2>Round</h2>
+    <button light round>Light Round</button>
+    <button round>Primary Round</button>
+    <button secondary round>Secondary Round</button>
+    <button danger round>Danger Round</button>
+    <button dark round>Dark Round</button>
+
+    <hr>
+
+    <h2>Block</h2>
+    <button block light>Light</button>
+    <button block>Primary</button>
+    <button block secondary>Secondary</button>
+    <button block danger>Danger</button>
+    <button block dark>Dark</button>
+
+    <hr>
+
+    <h2>Full</h2>
+    <button full light>Light</button>
+    <button full>Primary</button>
+    <button full secondary>Secondary</button>
+    <button full danger>Danger</button>
+    <button full dark>Dark</button>
+
+    <hr>
+
+    <h2>Sizes</h2>
+    <button light small>Light Small</button>
+    <button small>Default Small</button>
+    <button secondary>Secondary Medium</button>
+    <button danger medium>Danger Medium</button>
+    <button dark large>Dark Large</button>
+
+    <hr>
+
+    <h2>Icon</h2>
+    <p>
+        <button light>
+        <ion-icon name='arrow-back'></ion-icon>
+            Back
+        </button>
+
+        <button light>
+        <ion-icon name='arrow-down'></ion-icon>
+        </button>
+
+        <button light>
+            <ion-icon name='arrow-up'></ion-icon>
+        </button>
+
+        <button light>
+            Next
+            <ion-icon name='arrow-forward'></ion-icon>
+        </button>
+    </p>
+
+    <p>
+        <button>
+            <ion-icon name='home'></ion-icon>
+            Home
+        </button>
+        <button outline>
+            <ion-icon name='briefcase' is-active="false"></ion-icon>
+            Work
+        </button>
+        <button clear>
+            <ion-icon name='beer' is-active="false"></ion-icon>
+            Pub
+        </button>
+    </p>
+
+    <p>
+        <button secondary>
+            <ion-icon name='people'></ion-icon>
+            Friends
+        </button>
+        <button secondary outline>
+            <ion-icon name='paw' is-active="false"></ion-icon>
+            Best Friend
+        </button>
+    </p>
+
+    <p>
+        <button danger>
+            <ion-icon name='close'></ion-icon>
+            Remove
+        </button>
+        <button danger outline>
+            <ion-icon name='remove-circle' is-active="false"></ion-icon>
+        </button>
+        <button danger clear>
+            <ion-icon name='trash' is-active="false"></ion-icon>
+        </button>
+    </p>
+
+    <p>
+        <button dark round>
+            <ion-icon name='construct' is-active="false"></ion-icon>
+            Tools
+        </button>
+        <button dark clear>
+            <ion-icon name='hammer' is-active="false"></ion-icon>
+        </button>
+    </p>
+
+    <hr>
+
+    <h2>Buttons In Components</h2>
+    <ion-card>
+        <ion-card-content>
+            <img src="img/img-icon.png" />
+        </ion-card-content>
+
+        <ion-item>
+            <button clear item-left>Like</button>
+            <button clear item-right>Comment</button>
+        </ion-item>
+    </ion-card>
+
+    <ion-list>
+        <ion-item>
+            Inner Button
+            <button item-right outline>Outline</button>
+        </ion-item>
+
+        <ion-item>
+            Left Icon Button
+            <button item-right outline>
+                <ion-icon name='star'></ion-icon>
+                Left Icon
+            </button>
+        </ion-item>
+
+        <ion-item>
+            Right Icon Button
+            <button item-right outline>
+                Right Icon
+                <ion-icon name='star'></ion-icon>
+            </button>
+        </ion-item>
+    </ion-list>
+
+    <hr>
+
+    <h2>Floating Action Buttons</h2>
+    <button (click)="openFAB()">FAB</button>
+
+</ion-content>

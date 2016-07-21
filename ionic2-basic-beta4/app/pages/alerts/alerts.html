@@ -1,0 +1,17 @@
+<ion-header>
+    <ion-navbar>
+        <button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <ion-title>Alerts</ion-title>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+    <button block (click)="doBasic()">Basic</button>
+    <button block light (click)="doPrompt()">Prompt</button>
+    <button block secondary (click)="doComfirmation()">Comfirmation</button>
+    <button block danger (click)="doRadio()">Radio</button>
+    <button block dark (click)="doCheckbox()">Checkbox</button>
+</ion-content>
