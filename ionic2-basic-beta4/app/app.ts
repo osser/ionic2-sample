@@ -8,6 +8,12 @@ import {
     AlertsPage,
     BadgesPage,
     ButtonsPage,
+    CardListPage,
+    CheckboxesPage,
+    DatetimePage,
+    GesturesPage,
+    GridPage,
+    IconsPage,
 } from './pages/index';
 
 
@@ -33,6 +39,12 @@ export class MyApp {
             { title: 'Alerts', component: AlertsPage },
             { title: 'Badges', component: BadgesPage },
             { title: 'Buttons', component: ButtonsPage },
+            { title: 'Cards', component: CardListPage },
+            { title: 'Checkboxes', component: CheckboxesPage },
+            { title: 'Datetime', component: DatetimePage },
+            { title: 'Gestures', component: GesturesPage },
+            { title: 'Grid', component: GridPage },
+            { title: 'Icons', component: IconsPage },
         ];
     }
 

@@ -1,0 +1,55 @@
+<ion-header>
+    <ion-navbar>
+        <button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <ion-title>Card List</ion-title>
+    </ion-navbar>
+</ion-header>>
+
+<ion-content padding class="cards-bg">
+
+    <ion-card class="cards-list-demo">
+        <ion-card-header>
+            Card Samples
+        </ion-card-header>
+
+        <ion-list>
+            <button ion-item (click)="openPage(pageIndex.basic)">
+                <ion-icon name='cart' item-left></ion-icon>
+                Basic
+            </button>
+
+            <button ion-item (click)="openPage(pageIndex.headers)">
+                <ion-icon name='medical' item-left></ion-icon>
+                Headers
+            </button>
+
+            <button ion-item (click)="openPage(pageIndex.images)">
+                <ion-icon name='cafe' item-left></ion-icon>
+                Images
+            </button>
+
+            <button ion-item (click)="openPage(pageIndex.background)">
+                <ion-icon name='paw' item-left></ion-icon>
+                Background
+            </button>
+
+            <button ion-item (click)="openPage(pageIndex.advancedmap)">
+                <ion-icon name='beer' item-left></ion-icon>
+                Advanced Map
+            </button>
+
+            <button ion-item (click)="openPage(pageIndex.advancedsocial)">
+                <ion-icon name='planet' item-left></ion-icon>
+                Advanced Social
+            </button>
+
+            <button ion-item (click)="openPage(pageIndex.advancedweather)">
+                <ion-icon name='heart' item-left></ion-icon>
+                Advanced Weather
+            </button>
+
+        </ion-list>
+    </ion-card>
+</ion-content>
