@@ -17,6 +17,14 @@ import {
     InputsPage,
     ListsPage,
     LoadingPage,
+    ModalsPage,
+    PopoversPage,
+    RadiosPage,
+    RangesPage,
+    SearchbarsPage,
+    SegmentsPage,
+    SelectsPage,
+    SlidesPage,
 } from './pages/index';
 
 
@@ -51,6 +59,14 @@ export class MyApp {
             { title: 'Inputs', component: InputsPage },
             { title: 'Lists', component: ListsPage },
             { title: 'Loading', component: LoadingPage },
+            { title: 'Modals', component: ModalsPage },
+            { title: 'Popover', component: PopoversPage },
+            { title: 'Radios', component: RadiosPage },
+            { title: 'Range', component: RangesPage },
+            { title: 'Searchbar', component: SearchbarsPage },
+            { title: 'Segment', component: SegmentsPage },
+            { title: 'Select', component: SelectsPage },
+            { title: 'Slides', component: SlidesPage },
         ];
     }
 
