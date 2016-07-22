@@ -17,3 +17,6 @@ export * from './datetime/datetime';
 export * from './gestures/gestures';
 export * from './grid/grid';
 export * from './icons/icons';
+export * from './inputs/inputs';
+export * from './lists/lists';
+export * from './loading/loading';

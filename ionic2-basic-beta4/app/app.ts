@@ -14,6 +14,9 @@ import {
     GesturesPage,
     GridPage,
     IconsPage,
+    InputsPage,
+    ListsPage,
+    LoadingPage,
 } from './pages/index';
 
 
@@ -45,6 +48,9 @@ export class MyApp {
             { title: 'Gestures', component: GesturesPage },
             { title: 'Grid', component: GridPage },
             { title: 'Icons', component: IconsPage },
+            { title: 'Inputs', component: InputsPage },
+            { title: 'Lists', component: ListsPage },
+            { title: 'Loading', component: LoadingPage },
         ];
     }
 
