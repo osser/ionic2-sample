@@ -1,12 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
-/*
-  Generated class for the SearchbarsPage page.
+import { ApiService } from '../../providers/index';
 
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
-*/
 @Component({
     templateUrl: 'build/pages/searchbars/searchbars.html',
 })
@@ -14,8 +10,12 @@ export class SearchbarsPage {
 
     items;
 
-    constructor(private nav: NavController) {
+    constructor(private nav: NavController, private apiService: ApiService) {
         this.initializeItems();
+    }
+
+    openSource() {
+        this.apiService.openGitHubSourceUrl("searchbars");
     }
 
     initializeItems() {

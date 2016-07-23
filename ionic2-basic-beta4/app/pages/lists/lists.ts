@@ -12,6 +12,8 @@ import { ListMultilinePage } from './multiline';
 import { ListSlidingPage } from './sliding';
 import { ListThumbnailPage } from './thumbnail';
 
+import { ApiService } from '../../providers/index';
+
 @Component({
     templateUrl: 'build/pages/lists/lists.html',
 })
@@ -19,7 +21,7 @@ export class ListsPage {
 
     pages: Array<{ title: string, component: any }>;
 
-    constructor(private nav: NavController) {
+    constructor(private nav: NavController, private apiService: ApiService) {
         // set our app's pages
         this.pages = [
             { title: 'Basic', component: ListBasicPage },
@@ -40,4 +42,9 @@ export class ListsPage {
         if (page.component)
             this.nav.push(page.component);
     }
+
+    openSource() {
+        this.apiService.openGitHubSourceUrl("lists");
+    }
+
 }

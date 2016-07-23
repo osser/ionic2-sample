@@ -9,6 +9,8 @@ import { CardBasicPage } from './basic';
 import { CardHeadersPage } from './headers';
 import { CardImagesPage } from './images';
 
+import { ApiService } from '../../providers/index';
+
 @Component({
     templateUrl: 'build/pages/cards/cards.html',
 })
@@ -24,12 +26,16 @@ export class CardListPage {
         advancedweather: CardAdvancedWeatherPage,
     };
 
-    constructor(private nav: NavController) {
+    constructor(private nav: NavController, private apiService: ApiService) {
 
     }
 
     openPage(page) {
         this.nav.push(page);
+    }
+
+    openSource() {
+        this.apiService.openGitHubSourceUrl("cards");
     }
 
 }

@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
 import { Loading, NavController } from 'ionic-angular';
 
+import { ApiService } from '../../providers/index';
+
 @Component({
     templateUrl: 'build/pages/loading/loading.html',
 })
 export class LoadingPage {
 
-    constructor(private nav: NavController) {
+    constructor(private nav: NavController, private apiService: ApiService) {
 
     }
 
@@ -17,6 +19,10 @@ export class LoadingPage {
             dismissOnPageChange: true
         });
         this.nav.present(loading);
+    }
+
+    openSource() {
+        this.apiService.openGitHubSourceUrl("loading");
     }
 
 }

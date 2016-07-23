@@ -1,19 +1,18 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
-/*
-  Generated class for the BadgesPage page.
+import { ApiService } from '../../providers/index';
 
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
-*/
 @Component({
-  templateUrl: 'build/pages/badges/badges.html',
+    templateUrl: 'build/pages/badges/badges.html',
 })
 export class BadgesPage {
 
-  constructor(private nav: NavController) {
+    constructor(private nav: NavController, private apiService: ApiService) {
+    }
 
-  }
+    openSource() {
+        this.apiService.openGitHubSourceUrl("badges");
+    }
 
 }

@@ -3,6 +3,8 @@ import { App, Popover, NavController, Content, NavParams } from 'ionic-angular';
 
 import { PopWinPage } from './popwin';
 
+import { ApiService } from '../../providers/index';
+
 @Component({
     templateUrl: 'build/pages/popovers/popovers.html',
 })
@@ -10,7 +12,7 @@ export class PopoversPage {
     @ViewChild('popoverContent', { read: ElementRef }) content: ElementRef;
     @ViewChild('popoverText', { read: ElementRef }) text: ElementRef;
 
-    constructor(private nav: NavController) {
+    constructor(private nav: NavController, private apiService: ApiService) {
 
     }
 
@@ -23,5 +25,9 @@ export class PopoversPage {
         this.nav.present(popover, {
             ev: ev
         });
+    }
+
+    openSource() {
+        this.apiService.openGitHubSourceUrl("popovers");
     }
 }

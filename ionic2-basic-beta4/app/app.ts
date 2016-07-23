@@ -31,9 +31,11 @@ import {
     ToolbarPage,
 } from './pages/index';
 
+import { ApiService } from './providers/index';
 
 @Component({
-    templateUrl: 'build/app.html'
+    templateUrl: 'build/app.html',
+    providers: [ApiService]
 })
 export class MyApp {
     @ViewChild(Nav) nav: Nav;

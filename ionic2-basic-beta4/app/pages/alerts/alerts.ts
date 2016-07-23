@@ -1,12 +1,8 @@
 import { Component } from '@angular/core';
 import { Alert, NavController } from 'ionic-angular';
 
-/*
-  Generated class for the AlertsPage page.
+import { ApiService } from '../../providers/index';
 
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
-*/
 @Component({
     templateUrl: 'build/pages/alerts/alerts.html',
 })
@@ -17,10 +13,14 @@ export class AlertsPage {
     testCheckboxOpen: boolean;
     testCheckboxResult;
 
-    constructor(private nav: NavController) {
+    constructor(private nav: NavController, private apiService: ApiService) {
 
     }
 
+    openSource() {
+        this.apiService.openGitHubSourceUrl("alerts");
+    }
+    
     doBasic() {
         let alert = Alert.create({
             title: 'New Friend!',
@@ -215,4 +215,5 @@ export class AlertsPage {
             this.testCheckboxOpen = true;
         });
     }
+
 }

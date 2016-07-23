@@ -1,15 +1,21 @@
 import { Component } from '@angular/core';
 import { NavController, Toast } from 'ionic-angular';
 
+import { ApiService } from '../../providers/index';
+
 @Component({
     templateUrl: 'build/pages/toast/toast.html',
 })
 export class ToastPage {
 
-    constructor(private nav: NavController) {
+    constructor(private nav: NavController, private apiService: ApiService) {
 
     }
 
+    openSource() {
+        this.apiService.openGitHubSourceUrl("toast");
+    }
+    
     showToast(position: string) {
         let toast = Toast.create({
             message: 'Mmmm, buttered toast',

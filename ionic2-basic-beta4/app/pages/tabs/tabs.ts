@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
+import { ApiService } from '../../providers/index';
+
 import { TabsBasicPage } from './basic';
 import { TabsIconPage } from './icon';
 import { TabsIconTextPage } from './icon-text';
@@ -13,7 +15,7 @@ export class TabsPage {
 
     pages: Array<{ title: string, component: any }>;
 
-    constructor(private nav: NavController) {
+    constructor(private nav: NavController, private apiService: ApiService) {
         // set our app's pages
         this.pages = [
             { title: 'Basic', component: TabsBasicPage },
@@ -21,6 +23,10 @@ export class TabsPage {
             { title: 'Icon Text', component: TabsIconTextPage },
             { title: 'Badges', component: TabsBadgesPage },
         ];
+    }
+
+    openSource() {
+        this.apiService.openGitHubSourceUrl("tabs");
     }
 
     openPage(page) {

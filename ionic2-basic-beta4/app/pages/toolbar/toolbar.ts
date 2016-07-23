@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
+import { ApiService } from '../../providers/index';
+
 import { ToolbarBasicPage } from './basic';
 import { ToolbarButtonsPage } from './buttons';
 import { ToolbarColorsPage } from './colors';
@@ -14,7 +16,7 @@ export class ToolbarPage {
 
     pages: Array<{ title: string, component: any }>;
 
-    constructor(private nav: NavController) {
+    constructor(private nav: NavController, private apiService: ApiService) {
         // set our app's pages
         this.pages = [
             { title: 'Basic', component: ToolbarBasicPage },
@@ -25,6 +27,10 @@ export class ToolbarPage {
         ];
     }
 
+    openSource() {
+        this.apiService.openGitHubSourceUrl("toolbar");
+    }
+    
     openPage(page) {
         // navigate to the new page if it is not the current page
         if (page.component)

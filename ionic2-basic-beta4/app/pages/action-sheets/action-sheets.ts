@@ -1,12 +1,8 @@
 import { Component } from '@angular/core';
 import { Platform, ActionSheet, NavController } from 'ionic-angular';
 
-/*
-  Generated class for the ActionSheetsPage page.
+import { ApiService } from '../../providers/index';
 
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
-*/
 @Component({
     templateUrl: 'build/pages/action-sheets/action-sheets.html',
 })
@@ -14,8 +10,10 @@ export class ActionSheetsPage {
 
     msg: string;
 
-    constructor(public platform: Platform, public nav: NavController) {
-
+    constructor(
+        public platform: Platform,
+        public nav: NavController,
+        private apiService: ApiService) {
     }
 
     openMenu() {
@@ -71,4 +69,7 @@ export class ActionSheetsPage {
         this.nav.present(actionSheet);
     }
 
+    openSource() {
+        this.apiService.openGitHubSourceUrl("action-sheets");
+    }
 }

@@ -9,6 +9,8 @@ import { InputInsetPage } from './inset';
 import { InputPlaceholderPage } from './placeholder';
 import { InputStackedPage } from './stacked';
 
+import { ApiService } from '../../providers/index';
+
 @Component({
     templateUrl: 'build/pages/inputs/inputs.html',
 })
@@ -16,7 +18,7 @@ export class InputsPage {
 
     pages: Array<{ title: string, component: any }>;
 
-    constructor(private nav: NavController) {
+    constructor(private nav: NavController, private apiService: ApiService) {
         // set our app's pages
         this.pages = [
             { title: 'Basic', component: InputBasicPage },
@@ -34,4 +36,9 @@ export class InputsPage {
         if (page.component)
             this.nav.push(page.component);
     }
+
+    openSource() {
+        this.apiService.openGitHubSourceUrl("inputs");
+    }
+
 }
