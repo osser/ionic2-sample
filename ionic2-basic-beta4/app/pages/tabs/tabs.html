@@ -1,0 +1,16 @@
+<ion-header>
+    <ion-navbar>
+        <button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Tabs</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <button ion-item *ngFor="let page of pages" (click)="openPage(page)">
+            {{page.title}}
+        </button>
+    </ion-list>
+</ion-content>

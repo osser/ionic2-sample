@@ -25,6 +25,10 @@ import {
     SegmentsPage,
     SelectsPage,
     SlidesPage,
+    TabsPage,
+    ToastPage,
+    TogglesPage,
+    ToolbarPage,
 } from './pages/index';
 
 
@@ -67,6 +71,10 @@ export class MyApp {
             { title: 'Segment', component: SegmentsPage },
             { title: 'Select', component: SelectsPage },
             { title: 'Slides', component: SlidesPage },
+            { title: 'Tabs', component: TabsPage },
+            { title: 'Toast', component: ToastPage },
+            { title: 'Toggles', component: TogglesPage },
+            { title: 'Toolbar', component: ToolbarPage },
         ];
     }
 

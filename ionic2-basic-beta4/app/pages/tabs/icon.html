@@ -1,0 +1,19 @@
+<ion-tabs class="tabs-icon" [attr.danger]="isAndroid ? '' : null">
+    <ion-tab tabIcon="contact" [root]="tabOne"></ion-tab>
+    <ion-tab tabIcon="compass" [root]="tabTwo"></ion-tab>
+    <ion-tab tabIcon="analytics" [root]="tabThree"></ion-tab>
+    <ion-tab tabIcon="settings" [root]="tabFour"></ion-tab>
+</ion-tabs>
+
+<style>
+    body.ios {
+        .tab-button {
+            &[aria-selected="false"] {
+                color: #8c8c8c !important;
+            }
+            &[aria-selected="true"] {
+                color: #f53d3d !important;
+            }
+        }
+    }
+</style>

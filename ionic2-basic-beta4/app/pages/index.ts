@@ -28,3 +28,7 @@ export * from './searchbars/searchbars';
 export * from './segments/segments';
 export * from './selects/selects';
 export * from './slides/slides';
+export * from './tabs/tabs';
+export * from './toast/toast';
+export * from './toggles/toggles';
+export * from './toolbar/toolbar';
