@@ -29,6 +29,7 @@ import {
     ToastPage,
     TogglesPage,
     ToolbarPage,
+    PassdataPage,
 } from './pages/index';
 
 import { ApiService } from './providers/index';
@@ -77,6 +78,7 @@ export class MyApp {
             { title: 'Toast', component: ToastPage },
             { title: 'Toggles', component: TogglesPage },
             { title: 'Toolbar', component: ToolbarPage },
+            { title: 'Passdata', component: PassdataPage },
         ];
     }
 

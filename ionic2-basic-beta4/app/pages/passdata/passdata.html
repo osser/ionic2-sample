@@ -1,0 +1,28 @@
+<ion-header>
+    <ion-navbar>
+        <button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Pass Data</ion-title>
+        <ion-buttons end>
+            <button dark (click)="openSource()">
+            <ion-icon name="link"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <p>
+        <button primary (click)="openModal()">Open Modal Window</button>
+    </p>
+    <p>
+        戻り値1:{{result1}}
+    </p>
+    <p>
+        戻り値2:{{result2}}
+    </p>
+    <p>
+        戻り値3:{{result3}}
+    </p>
+</ion-content>

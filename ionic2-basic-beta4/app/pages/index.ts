@@ -32,3 +32,4 @@ export * from './tabs/tabs';
 export * from './toast/toast';
 export * from './toggles/toggles';
 export * from './toolbar/toolbar';
+export * from './passdata/passdata';
